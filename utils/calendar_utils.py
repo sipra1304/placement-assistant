@@ -41,9 +41,6 @@ def create_event(
     start_iso/end_iso must be RFC3339 with timezone, e.g. '2025-09-09T10:00:00+05:30'
     Returns event id.
     """
-    if os.getenv("MOCK_MODE") == "1":
-        # Return a stable fake id in mock mode
-        return f"mock-event-{hash((summary, start_iso, end_iso, tuple(attendees or []), tuple(email_reminders_minutes or []))) & 0xffff}"
     service = _auth_calendar()
     event: Dict[str, Any] = {
         "summary": summary,
