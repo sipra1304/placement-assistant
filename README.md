@@ -1,6 +1,6 @@
 # Placement Assistant – Multi-Agent System
 
-Automatically fetch placement emails, extract deadlines/interviews, create Google Calendar events, and log analytics. Optional reminders and safe mock mode included.
+Automatically fetch placement emails, extract deadlines/interviews, create Google Calendar events, and log analytics. Optional reminders.
 
 ---
 
@@ -9,7 +9,6 @@ Automatically fetch placement emails, extract deadlines/interviews, create Googl
 - Date/time parsing (deadlines, interviews, multi-day events)
 - Google Calendar event creation with attendees & reminders
 - Analytics logging (`data/analytics_log.csv`)
-- Mock mode for safe testing
 
 ---
 
@@ -25,3 +24,4 @@ cd "Placement Assistant"
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
+
