@@ -149,7 +149,10 @@ config.ini
 secrets.json
 *.db
 *.sqlite
-
+# Ignore sensitive token files
+data/token_*.json
 credentials.json
 token.json
 .env
+
+
