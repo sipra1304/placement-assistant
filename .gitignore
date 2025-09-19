@@ -149,3 +149,7 @@ config.ini
 secrets.json
 *.db
 *.sqlite
+
+credentials.json
+token.json
+.env

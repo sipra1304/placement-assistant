@@ -1,0 +1,11 @@
+email_from,email_subject,type,start_iso,end_iso,calendar_event_id,confidence
+hr@example.com,Mock Placement Interview,interview,2025-09-25T10:30:00+05:30,2025-09-25T11:30:00+05:30,mock-event-26056,0.6
+hr@example.com,Mock Placement Interview,interview,2025-09-25T10:30:00+05:30,2025-09-25T11:30:00+05:30,mock-event-34113,0.6
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,INFOSYS Campus Drive,deadline,2025-09-15T15:00:00+05:30,2025-09-15T15:30:00+05:30,ckfohb164cbiah1f265ah5nkeg,0.6
+hr@example.com,Mock Placement Interview,interview,2025-09-25T10:30:00+05:30,2025-09-25T11:30:00+05:30,mock-event-5855,0.6
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,Re: Campus Drive,deadline,2025-09-19T18:15:00+05:30,2025-09-19T18:45:00+05:30,qlgffe2dn96rjjaeuhqute8npo,0.6
+hr@example.com,Mock Placement Interview,drive,2025-09-23T10:00:00+05:30,2025-09-24T17:00:00+05:30,mock-event-16466,0.8
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,Re: Campus Drive,drive,2025-09-23T10:00:00+05:30,2025-09-24T17:00:00+05:30,fddlld3jcqeoo7aoa2297mi6kc,0.8
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,Re: Campus Drive,deadline,2025-09-18T10:00:00+05:30,2025-09-18T10:30:00+05:30,qbtvv2cl6ed2152sa6tpbhfpa4,0.6
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,Campus Drive,deadline,2025-09-18T10:00:00+05:30,2025-09-18T10:30:00+05:30,mtktpnb8ttsqs62h5atnq7994o,0.6
+Sipra Mohanty <sipra.1304.mohanty@gmail.com>,INFOSYS Campus Drive,deadline,2025-09-15T15:00:00+05:30,2025-09-15T15:30:00+05:30,dlf6bh651ok4u9fj8a057qe9ns,0.6
