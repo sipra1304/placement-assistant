@@ -10,5 +10,9 @@ def run_calendar(event_payload: Dict) -> str:
     attendees_env = os.getenv("ATTENDEES", "").strip()
     attendees: Optional[List[str]] = [a.strip() for a in attendees_env.split(",") if a.strip()] if attendees_env else None
     reminders_env = os.getenv("EMAIL_REMINDERS_MIN", "").strip()
-    email_reminders_minutes: Optional[List[int]] = [int(x) for x in reminders_env.split(",") if x.strip().isdigit()] if reminders_env else None
+    if reminders_env:
+        email_reminders_minutes: Optional[List[int]] = [int(x) for x in reminders_env.split(",") if x.strip().isdigit()]
+    else:
+        # default reminders at 60 and 30 minutes before the event
+        email_reminders_minutes = [60, 30]
     return create_event(title, start_iso, end_iso, desc, attendees=attendees, email_reminders_minutes=email_reminders_minutes)

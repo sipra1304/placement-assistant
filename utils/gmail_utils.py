@@ -16,26 +16,32 @@ from .config import GOOGLE_CREDENTIALS, DATA_DIR
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly",
           "https://www.googleapis.com/auth/gmail.send"]
 
-TOKEN_PATH = DATA_DIR / "token_gmail.json"
+def _token_path_for_user(user_email: str | None) -> Path:
+    # Store per-user token to allow multiple users on same machine
+    if user_email:
+        safe = user_email.replace("@", "_at_").replace("/", "_")
+        return DATA_DIR / f"token_gmail_{safe}.json"
+    return DATA_DIR / "token_gmail.json"
 
-def _auth_gmail():
+def _auth_gmail(user_email: str | None = None):
     creds = None
-    if TOKEN_PATH.exists():
-        creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), SCOPES)
+    token_path = _token_path_for_user(user_email)
+    if token_path.exists():
+        creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(GOOGLE_CREDENTIALS, SCOPES)
             creds = flow.run_local_server(port=0)
-        TOKEN_PATH.write_text(creds.to_json())
+        token_path.write_text(creds.to_json())
     return build("gmail", "v1", credentials=creds)
 
-def fetch_unread_emails(query: str, max_results: int = 10) -> List[Dict[str, Any]]:
+def fetch_unread_emails(query: str, max_results: int = 10, user_email: str | None = None) -> List[Dict[str, Any]]:
     """
     Returns a list of dicts: {id, snippet, payload_headers, body_text}
     """
-    service = _auth_gmail()
+    service = _auth_gmail(user_email=user_email)
     resp = service.users().messages().list(userId="me", q=query, maxResults=max_results).execute()
     msgs = resp.get("messages", []) or []
     out = []
