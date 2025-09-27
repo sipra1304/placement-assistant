@@ -18,7 +18,8 @@ Automatically fetch placement emails, extract deadlines/interviews, create Googl
 
 ---
 ## Workflow
-<img width="1536" height="1024" alt="ChatGPT Image Sep 27, 2025 at 08_24_19 AM" src="https://github.com/user-attachments/assets/78fba2d2-fa73-4b6d-a985-c5e08169bd3a" />
+<img width="1475" height="587" alt="ChatGPT Image Sep 27, 2025 at 08_24_19 AM" src="https://github.com/user-attachments/assets/0a67e3a9-addd-477a-94ec-3cd64c6d6a2a" />
+
 
 ---
 
@@ -30,5 +31,6 @@ cd "Placement Assistant"
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
+
 
 
