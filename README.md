@@ -84,7 +84,7 @@ export GOOGLE_OAUTH_CLIENT_SECRETS="./credentials/credentials.json"
 Set project-specific values via `.env` or export:
 
 ```bash
-export ATTENDEES="coordinator@college.edu,placement@iiit-bh.ac.in"
+export ATTENDEES="coordinator@college.edu,pqr@college.com"
 export EMAIL_REMINDERS_MIN="60,30"  # reminders 60 & 30 min before
 export GMAIL_INCLUDE_READ=0  # 1 = include read emails, 0 = unread only
 export GOOGLE_OAUTH_CLIENT_SECRETS="./credentials/credentials.json"
@@ -109,5 +109,6 @@ python run.py \
 - `--hours` → time window to scan emails.
 - `--include-read` (optional) → add if you also want to include already read emails
 - `--max` → max number of emails to process.
+
 
 
