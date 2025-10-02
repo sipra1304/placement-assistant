@@ -48,7 +48,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Configure Gmail API (Option A — Recommended)
+### 2. Configure Gmail API
 
 Each user sets up their own Google OAuth credentials. This avoids secret sharing and ensures clean separation.
 
@@ -108,4 +108,5 @@ python run.py \
 - `--user-email` → used to store/load the correct token per user.
 - `--track-email` → comma-separated list of sender emails to watch.
 - `--hours` → time window to scan emails.
+
 - `--max` → max number of emails to process.
