@@ -100,12 +100,14 @@ python run.py \
   --track-email "company@example.com" \
   --hours 6 \
   --max 10
+  --include-read
 ```
 
 **Parameters:**
 - `--user-email` → used to store/load the correct token per user.
 - `--track-email` → comma-separated list of sender emails to watch.
 - `--hours` → time window to scan emails.
-
+- `--include-read` (optional) → add if you also want to include already read emails
 - `--max` → max number of emails to process.
+
 
