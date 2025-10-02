@@ -50,9 +50,7 @@ pip install -r requirements.txt
 
 ### 2. Configure Gmail API
 
-Each user sets up their own Google OAuth credentials. This avoids secret sharing and ensures clean separation.
-
-#### Step-by-step:
+#### Step-by-step guide:
 
 **Create a Google Cloud Project & Enable Gmail API**
 - Go to [Google Cloud Console](https://console.cloud.google.com/) → create a project.
@@ -110,3 +108,4 @@ python run.py \
 - `--hours` → time window to scan emails.
 
 - `--max` → max number of emails to process.
+
